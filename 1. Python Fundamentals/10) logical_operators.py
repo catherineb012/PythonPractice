@@ -23,7 +23,7 @@ does_homework = False
 tidys_room = True
 makes_food = True
 
-if does_homework or tidys_room and makes_food:
+if does_homework or tidys_room and makes_food: # same as 'does_homework or (tidys_room and makes_food)'
     print("Is allowed to go to the party.")
 
 else:
@@ -36,7 +36,7 @@ print()
 has_drama_lessons = True
 less_than_12 = False
 
-if has_drama_lessons and not less_than_12: #must be older than 12
+if has_drama_lessons and not less_than_12: #must be 12 or older
     print("Can audition for the movie.")
 
 else:

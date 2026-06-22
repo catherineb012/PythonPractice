@@ -32,7 +32,7 @@ for no_of_x in numbers: #naming variables carefully can help solve the problem
     
 #CHALLENGE 2 - print letter L
 
-numbers = [1, 1,1, 1, 5]
+numbers = [1, 1, 1, 1, 5]
 
 for number in numbers:
     for i in range(number):

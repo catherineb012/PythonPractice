@@ -5,7 +5,7 @@
 #      " "  double quotes
 
 Python_course = "Python's Course for Beginners"
-python_cousre = 'Python Couse for "Beginners" '
+python_course = 'Python Couse for "Beginners" '
 #if you want to add an apostrophe in the string you have to use " " double quotes otherwise it will get confused
 #if you want to put words in double speech marks inside the string use ' ' single quotes
 

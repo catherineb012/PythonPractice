@@ -1,5 +1,15 @@
 #LIST METHODS
 
+#append - adds item to end of list
+#insert - adds item to certain index and pushes rest
+#remove - removes specified item
+#pop - removes last item
+#sort - sorts list in ascending order
+#reverse - reverses list
+#copy - makes copy of list
+#clear - deletes all items in the list
+
+
 numbers = [5,2,1,7,4]
 numbers.append(10) #adds 10 to the end of the list
 print(numbers)
