@@ -1,0 +1,42 @@
+#If don't have IDE, then need these lines:
+#import sys
+#import matplotlib
+#matplotlib.use('Agg')
+#and also these at the end *
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+df.plot()
+
+plt.show()
+
+
+
+#Scatter Plot
+
+df.plot(kind = "scatter", x = "Duration", y = "Calories")
+
+plt.show() # Correlation of 0.922721
+
+
+df.plot(kind = "scatter", x = "Duration", y = "Maxpulse")
+
+plt.show() # Correlation of 0.009403
+
+
+
+# Histogram - shows us the frq at each interval, only need one column
+
+df["Duration"].plot(kind = "hist")
+
+plt.show()
+
+#This tells us that there were over 100 workouts that laster between 50 and 60 mins
+
+
+# *
+#plt.savefig(sys.stdout.buffer)
+#sys.stdout.flush()

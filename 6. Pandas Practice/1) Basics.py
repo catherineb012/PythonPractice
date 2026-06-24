@@ -10,7 +10,7 @@ nums = [1, 2, 3, 4, 5]
 mySeries = pd.Series(nums) #wraps nums list and wraps it inside a Series object 
 print(mySeries) #labels will be 0,1,2, etc if not specified with 'index'
 print()
-print(mySeries[0])
+print(mySeries[0]) #prints the first value of the Series
 print()
 
 
@@ -35,7 +35,6 @@ print()
 myCalSeries = pd.Series(calories, index = ["Day 1", "Day 2"]) #The keys in the dict become the labels
 print(myCalSeries)
 print()
-
 
 
 #DataFrames - multi-dimensional tables/data sets
@@ -85,6 +84,7 @@ print(df)
 #"Big data sets are often stored, or extracted as JSON." 
 #"JSON is plain text, but has the format of an object, and is well known in the world of programming, including Pandas."
 #"JSON objects have the same format as Python dictionaries."
+
 
 #Loading a Python Dictionary into a DataFrame
 

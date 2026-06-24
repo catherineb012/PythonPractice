@@ -9,7 +9,11 @@ customer = {
 }
 
 print(customer["name"])
+
+#print(customer["birthdate"]) --> this will result in an error as there is no 'birthdate' key
+#so instead can do this:
 print(customer.get("birthdate")) #if the key doesn't exist, then prints 'None' - as it represents the absence of a value
+
 print(customer.get("birthdate", "Jan 1 1980")) #if key doesn't exist, then can set a default value
 
 customer["name"] = "Jack Smith"

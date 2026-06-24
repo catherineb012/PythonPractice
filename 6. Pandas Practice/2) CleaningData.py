@@ -20,12 +20,10 @@ print(new_df.to_string())
 #print(df.to_string())
 
 
-
 #Replace Empty Values For Specified Columns
 
 new_df = df.fillna({"Calories" : 130})
 print(new_df.to_string())
-
 
 
 #Replacing cells with Mean, Median, Mode
@@ -51,7 +49,42 @@ print(new_df.to_string())
 print(df.isnull().sum()) #prints a list of the columns with the counts of blanks
 
 
-df.fillna({"Date" : date,"Calories" : x}, inplace = True) #one single dictionary and replaces all missing values in the table
-print(df.to_string())
+#df.fillna({"Date" : date,"Calories" : x}, inplace = True) #one single dictionary and replaces all missing values in the table
+#print(df.to_string())
 
 
+#Converting cells in the correct format
+
+df["Date"] = pd.to_datetime(df['Date'], format ='mixed')
+print(df.to_string)
+
+df.dropna(subset = ['Date'], inplace = True) # removes row with NULL value in the 'Date' column
+
+
+#Replacing Wrong Values
+
+df.loc[7, 'Duration'] = 45 # replaces the cell if you know where the mistake is
+
+#For bigger datasets can set any value that complies with a rule to a certain value
+
+for x in df.index:
+    if df.loc[x, 'Duration'] > 120:
+        df.loc[x, 'Duration'] = 120
+
+# removes all rows where the duration > 120
+
+for x in df.index:
+    if df.loc[x, 'Duration'] > 120:
+        df.drop(x, inplace = True)
+
+
+#Removing Duplicates
+
+#for x in df.index:
+#    if df.loc[x, 'Date'] == df.loc[x+1, 'Date']:
+#        ...
+
+print(df.duplicated()) # prints True for every row that is a duplicate
+
+df.drop_duplicates(inplace = True)
+print(df.to_string)
